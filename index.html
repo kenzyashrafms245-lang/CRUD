@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Product Management System</h2>
+        <div class="form-floating  m-3">
+            <input oninput="validation(this)" type="text" class="form-control" id="productName"
+                placeholder="name@example.com">
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating  m-3">
+            <input oninput="validation(this)" type="number" class="form-control" id="productPrice"
+                placeholder="name@example.com">
+            <label for="productPrice">Product Price</label>
+        </div>
+        <div class="form-floating  m-3">
+            <input oninput="validation(this)" type="text" class="form-control" id="productCat"
+                placeholder="name@example.com">
+            <label for="productCat">Product Category</label>
+        </div>
+        <div class="form-floating  m-3">
+            <input oninput="validation(this)" type="file" accept="Image/*" class="form-control" id="productImg"
+                placeholder="name@example.com">
+            <label for="productImg">Product Image</label>
+        </div>
+
+        <div>
+            <button id="addBtn" class="btn btn-info ms-auto d-block m-3 " onclick="addProduct()" disabled>Add</button>
+            <button id="updateBtn" class="btn btn-success ms-auto d-block m-3 d-none"
+                onclick=" updateInput()">Update</button>
+
+        </div>
+
+        <div class="form-floating  m-3">
+            <input type="search" oninput="searchProduct(this.value)" class="form-control" id="productsearch"
+                placeholder="name@example.com">
+            <label for="productsearch">Search Product Name </label>
+        </div>
+
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th scope="col">NO.</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">name</th>
+                    <th scope="col">price</th>
+                    <th scope="col">category</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
